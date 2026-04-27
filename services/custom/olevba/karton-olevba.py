@@ -24,7 +24,7 @@ class OlevbaKarton(Karton):
         # Download the resource to a temporary file
         with sample_resource.download_temporary_file() as sample_file:
             # And run `olevba` on it
-            olevba = subprocess.check_output(["olevba", sample_file.name])
+            olevba = subprocess.check_output(["/opt/karton-workers-venv/bin/olevba", sample_file.name])
 
         # Send our results for further processing or reporting
         task = Task(
