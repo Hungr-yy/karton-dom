@@ -4,7 +4,6 @@ After=network.target
 
 [Service]
 Environment=KARTON_CONFIG_PATH=/etc/karton/karton.ini
-Environment=CAPA_RULES_PATH=/opt/capa-rules
 Type=simple
 WorkingDirectory=/opt/karton-custom/services/custom/capa
 ExecStart=/opt/karton-workers-venv/bin/python /opt/karton-custom/services/custom/capa/karton-capa.py
