@@ -8,10 +8,8 @@ class OlevbaKarton(Karton):
     """
     identity = "karton.olevba"
     filters = [
-        {"type": "sample", "stage": "recognized", "kind": "document", "platform": "win32", "extension": "doc"},
-        {"type": "sample", "stage": "recognized", "kind": "document", "platform": "win32", "extension": "docm"},
-        {"type": "sample", "stage": "recognized", "kind": "document", "platform": "win32", "extension": "xls"},
-        {"type": "sample", "stage": "recognized", "kind": "document", "platform": "win32", "extension": "xlsm"},
+        {"type": "sample", "stage": "recognized", "kind": "document", "platform": "win32", "extension": ext}
+        for ext in ("doc", "docm", "docx", "xls", "xlsm", "xlsx", "ppt", "pptm", "pptx")
     ]
 
     def process(self, task: Task) -> None:

@@ -12,16 +12,18 @@ Install it into the shared worker venv on the LXC:
 /opt/karton-workers-venv/bin/pip install oletools
 ```
 
-The service invokes `olevba` from `PATH`; the worker venv's `bin/` must be
-reachable, or `olevba` must otherwise be resolvable on the unit's `PATH`.
+The service invokes the binary by absolute path
+(`/opt/karton-workers-venv/bin/olevba`) so it does not rely on the
+systemd unit's `PATH`.
 
 ## Notes
 
-- The four filters cover the Office document types the karton-classifier
-  emits with `kind: document, platform: win32`: `doc`, `docm`, `xls`,
-  `xlsm`. Bare `docx`/`xlsx`/`pptx`/`pptm` are intentionally not included
-  per the spec; add them later if/when the pipeline starts producing
-  matching tasks.
+- The filter list covers the Office document extensions the
+  karton-classifier emits with `kind: document, platform: win32`:
+  `doc`, `docm`, `docx`, `xls`, `xlsm`, `xlsx`, `ppt`, `pptm`, `pptx`.
+  This is broader than the original spec in `CLAUDE.md` (which only
+  listed the four legacy / macro-enabled extensions) — olevba itself
+  handles all nine, so we let it see all nine.
 - olevba prints a multi-section text report to stdout; we capture stdout
   verbatim and ship it as the outgoing resource.
 
