@@ -19,7 +19,7 @@ class PdfidKarton(Karton):
         # Download the resource to a temporary file
         with sample_resource.download_temporary_file() as sample_file:
             # And run `pdfid.py` on it
-            pdfid = subprocess.check_output(["python", "/opt/pdfid/pdfid.py", sample_file.name])
+            pdfid = subprocess.check_output(["python3", "/opt/pdfid/pdfid.py", sample_file.name])
 
         # Send our results for further processing or reporting
         task = Task(
