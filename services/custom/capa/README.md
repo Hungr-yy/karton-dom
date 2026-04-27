@@ -18,10 +18,9 @@ git clone https://github.com/mandiant/capa-rules.git /opt/capa-rules
 
 ## Notes
 
-- The service invokes `capa -j <sample_file>` (where `-j` requests JSON
-  output). It relies on the `capa` console script being on `PATH` — the
-  worker venv's `bin/` must be reachable, or `capa` must be symlinked into a
-  system location.
+- The service invokes `/opt/karton-workers-venv/bin/capa -j <sample_file>`
+  by absolute path so it does not rely on the systemd unit's `PATH`. `-j`
+  requests JSON output.
 - The capa-rules location is supplied via the `CAPA_RULES_PATH` environment
   variable set in the systemd unit. This is the **one deliberate deviation**
   from the canonical `.service` template (which otherwise allows only
