@@ -1,0 +1,9 @@
+[submodule "services/cert-polska/karton-archive-extractor"]
+	path = services/cert-polska/karton-archive-extractor
+	url = https://github.com/CERT-Polska/karton-archive-extractor
+[submodule "services/cert-polska/karton-yaramatcher"]
+	path = services/cert-polska/karton-yaramatcher
+	url = https://github.com/CERT-Polska/karton-yaramatcher
+[submodule "services/cert-polska/karton-mwdb-reporter"]
+	path = services/cert-polska/karton-mwdb-reporter
+	url = https://github.com/CERT-Polska/karton-mwdb-reporter
