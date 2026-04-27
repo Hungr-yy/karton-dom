@@ -19,7 +19,7 @@ class CapaKarton(Karton):
         # Download the resource to a temporary file
         with sample_resource.download_temporary_file() as sample_file:
             # And run `capa` on it
-            capa = subprocess.check_output(["/opt/karton-workers-venv/bin/capa", "-j", sample_file.name])
+            capa = subprocess.check_output(["/opt/karton-workers-venv/bin/capa", "-r", "/opt/capa-rules", "-j", sample_file.name])
 
         # Send our results for further processing or reporting
         task = Task(
