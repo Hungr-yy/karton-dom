@@ -1,0 +1,14 @@
+[Unit]
+Description=Karton olevba VBA macro analyzer
+After=network.target
+
+[Service]
+Environment=KARTON_CONFIG_PATH=/etc/karton/karton.ini
+Type=simple
+WorkingDirectory=/opt/karton-custom/karton-olevba
+ExecStart=/opt/karton-workers-venv/bin/python /opt/karton-custom/karton-olevba/karton-olevba.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

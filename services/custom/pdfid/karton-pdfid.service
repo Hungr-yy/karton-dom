@@ -1,0 +1,14 @@
+[Unit]
+Description=Karton pdfid analyzer
+After=network.target
+
+[Service]
+Environment=KARTON_CONFIG_PATH=/etc/karton/karton.ini
+Type=simple
+WorkingDirectory=/opt/karton-custom/karton-pdfid
+ExecStart=/opt/karton-workers-venv/bin/python /opt/karton-custom/karton-pdfid/karton-pdfid.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

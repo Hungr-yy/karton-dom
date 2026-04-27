@@ -1,0 +1,15 @@
+[Unit]
+Description=Karton capa MITRE ATT&CK capability analyzer
+After=network.target
+
+[Service]
+Environment=KARTON_CONFIG_PATH=/etc/karton/karton.ini
+Environment=CAPA_RULES_PATH=/opt/capa-rules
+Type=simple
+WorkingDirectory=/opt/karton-custom/karton-capa
+ExecStart=/opt/karton-workers-venv/bin/python /opt/karton-custom/karton-capa/karton-capa.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=Karton dotnetfile .NET metadata extractor
+After=network.target
+
+[Service]
+Environment=KARTON_CONFIG_PATH=/etc/karton/karton.ini
+Type=simple
+WorkingDirectory=/opt/karton-custom/karton-dotnetfile
+ExecStart=/opt/karton-workers-venv/bin/python /opt/karton-custom/karton-dotnetfile/karton-dotnetfile.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
