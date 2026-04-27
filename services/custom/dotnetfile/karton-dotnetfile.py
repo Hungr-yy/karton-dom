@@ -22,7 +22,7 @@ class DotnetfileKarton(Karton):
         # Download the resource to a temporary file
         with sample_resource.download_temporary_file() as sample_file:
             # And run `dotnetfile_dump.py` on it
-            dotnetfile = subprocess.check_output(["python", "/opt/dotnetfile/dotnetfile_dump.py", "-f", sample_file.name])
+            dotnetfile = subprocess.check_output(["python3", "/opt/dotnetfile/dotnetfile_dump.py", "-f", sample_file.name])
 
         # Send our results for further processing or reporting
         task = Task(
