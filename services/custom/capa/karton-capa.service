@@ -6,8 +6,8 @@ After=network.target
 Environment=KARTON_CONFIG_PATH=/etc/karton/karton.ini
 Environment=CAPA_RULES_PATH=/opt/capa-rules
 Type=simple
-WorkingDirectory=/opt/karton-custom/karton-capa
-ExecStart=/opt/karton-workers-venv/bin/python /opt/karton-custom/karton-capa/karton-capa.py
+WorkingDirectory=/opt/karton-custom/services/custom/capa
+ExecStart=/opt/karton-workers-venv/bin/python /opt/karton-custom/services/custom/capa/karton-capa.py
 Restart=always
 RestartSec=10
 

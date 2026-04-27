@@ -29,8 +29,8 @@ curl -L -o /opt/pdfid/pdfid.py \
 pct enter 130
 
 # Inside the workers LXC:
-mkdir -p /opt/karton-custom/karton-pdfid
-# (copy karton-pdfid.py into /opt/karton-custom/karton-pdfid/)
+mkdir -p /opt/karton-custom/services/custom/pdfid
+# (copy karton-pdfid.py into /opt/karton-custom/services/custom/pdfid/)
 # (copy karton-pdfid.service to /etc/systemd/system/)
 # (install the underlying tool:)
 mkdir -p /opt/pdfid

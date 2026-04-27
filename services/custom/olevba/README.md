@@ -32,8 +32,8 @@ reachable, or `olevba` must otherwise be resolvable on the unit's `PATH`.
 pct enter 130
 
 # Inside the workers LXC:
-mkdir -p /opt/karton-custom/karton-olevba
-# (copy karton-olevba.py into /opt/karton-custom/karton-olevba/)
+mkdir -p /opt/karton-custom/services/custom/olevba
+# (copy karton-olevba.py into /opt/karton-custom/services/custom/olevba/)
 # (copy karton-olevba.service to /etc/systemd/system/)
 # (install the underlying tool:)
 /opt/karton-workers-venv/bin/pip install oletools

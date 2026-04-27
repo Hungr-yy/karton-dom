@@ -32,8 +32,8 @@ via the standard `PATH`.
 pct enter 130
 
 # Inside the workers LXC:
-mkdir -p /opt/karton-custom/karton-floss
-# (copy karton-floss.py into /opt/karton-custom/karton-floss/)
+mkdir -p /opt/karton-custom/services/custom/floss
+# (copy karton-floss.py into /opt/karton-custom/services/custom/floss/)
 # (copy karton-floss.service to /etc/systemd/system/)
 # (install the underlying tool:)
 /opt/karton-workers-venv/bin/pip install flare-floss

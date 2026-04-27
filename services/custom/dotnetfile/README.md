@@ -36,8 +36,8 @@ curl -L -o /opt/dotnetfile/dotnetfile_dump.py \
 pct enter 130
 
 # Inside the workers LXC:
-mkdir -p /opt/karton-custom/karton-dotnetfile
-# (copy karton-dotnetfile.py into /opt/karton-custom/karton-dotnetfile/)
+mkdir -p /opt/karton-custom/services/custom/dotnetfile
+# (copy karton-dotnetfile.py into /opt/karton-custom/services/custom/dotnetfile/)
 # (copy karton-dotnetfile.service to /etc/systemd/system/)
 # (install the underlying tool:)
 /opt/karton-workers-venv/bin/pip install dotnetfile

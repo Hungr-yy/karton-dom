@@ -37,8 +37,8 @@ apt install poppler-utils
 pct enter 130
 
 # Inside the workers LXC:
-mkdir -p /opt/karton-custom/karton-pdf2png
-# (copy karton-pdf2png.py into /opt/karton-custom/karton-pdf2png/)
+mkdir -p /opt/karton-custom/services/custom/pdf2png
+# (copy karton-pdf2png.py into /opt/karton-custom/services/custom/pdf2png/)
 # (copy karton-pdf2png.service to /etc/systemd/system/)
 # (install the underlying tool:)
 apt install poppler-utils

@@ -38,8 +38,8 @@ git clone https://github.com/mandiant/capa-rules.git /opt/capa-rules
 pct enter 130
 
 # Inside the workers LXC:
-mkdir -p /opt/karton-custom/karton-capa
-# (copy karton-capa.py into /opt/karton-custom/karton-capa/)
+mkdir -p /opt/karton-custom/services/custom/capa
+# (copy karton-capa.py into /opt/karton-custom/services/custom/capa/)
 # (copy karton-capa.service to /etc/systemd/system/)
 # (install the underlying tool and rules:)
 /opt/karton-workers-venv/bin/pip install flare-capa
