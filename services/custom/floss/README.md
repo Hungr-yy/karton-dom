@@ -12,11 +12,9 @@ into the shared worker venv on the LXC:
 /opt/karton-workers-venv/bin/pip install flare-floss
 ```
 
-The service invokes `floss` from `PATH`; the worker venv's `bin/` must be on
-the unit's `PATH`, or `floss` must otherwise be resolvable. The systemd unit
-runs the Python script via the venv's interpreter, so console scripts
-installed in that venv are typically resolved as long as `floss` is reachable
-via the standard `PATH`.
+The service invokes the binary by absolute path
+(`/opt/karton-workers-venv/bin/floss`) so it does not rely on the systemd
+unit's `PATH`.
 
 ## Notes
 

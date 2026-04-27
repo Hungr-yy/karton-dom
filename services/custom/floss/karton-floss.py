@@ -19,7 +19,7 @@ class FlossKarton(Karton):
         # Download the resource to a temporary file
         with sample_resource.download_temporary_file() as sample_file:
             # And run `floss` on it
-            floss = subprocess.check_output(["floss", sample_file.name])
+            floss = subprocess.check_output(["/opt/karton-workers-venv/bin/floss", sample_file.name])
 
         # Send our results for further processing or reporting
         task = Task(
